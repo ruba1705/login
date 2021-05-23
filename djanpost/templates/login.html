@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log IN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body style="max-width:50%;margin:auto;background-color:pink";">
+<br>
+<br>
+<br>
+<br>
+    <h4 class="center-align" style="color:black;background-color:skyblue;"><b>Log in</b></h4>
+    <br>
+    {% if err %}
+        <p class="center-align red-text"> {{err}} </p>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <div class="center-align">
+            <button type="submit"  style="font-size:20px;background-color:skyblue;color:black;border:5px sky blue;" type="submit"><b>LOG IN</b></button><br><br>
+            <a class="waves-effect waves-yellow btn-flat white-text"style="font-size:20px;" href="/register/"><b>CLICK HERE REGISTER !</b></a>
+        </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
